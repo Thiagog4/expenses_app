@@ -75,7 +75,7 @@ class _TransactionFormState extends State<TransactionForm> {
                     child: Text(
                       _selectedDate == null
                           ? 'Nenhuma data selecionada!'
-                          : 'Data Selecionada: ${DateFormat('dd/MM/y').format(_selectedDate!)}',
+                          : 'Data Selecionada: ${DateFormat('dd/MM/y').format(_selectedDate)}',
                     ),
                   ),
                   TextButton(
@@ -97,7 +97,7 @@ class _TransactionFormState extends State<TransactionForm> {
                   child: Text(
                     'Nova Transação',
                     style: TextStyle(
-                      color: Theme.of(context).textTheme.button?.color,
+                      color: Theme.of(context).textTheme.labelLarge?.color,
                     ),
                   ),
                   onPressed: _submitForm,
